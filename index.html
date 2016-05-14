@@ -15,12 +15,16 @@
 				</header>
 				
 					<div id="selectName" class="dropDown">
-			            <span class="dropHeader">Home</span>
+			            <span class="dropHeader">Profile</span>
 			        </div>
 				        <ul id="selectName" class="optionList" >
 				            <li id="value0" class="option">
-				                <p>There are constant beers coming out which makes it hard for anyone to choose what they want to drink.</p>
-				                <p>Using this app will help you decide a little better by reading a couple of reviews. We even have a beer of the week!</p>
+				                <div class="signIn">
+				                	<h1>Jg.selene_'s Profile</h1>
+				                	<h2>Jackie Gutierrez</h2>
+					                <h2>Age: 22</h2>
+					                <h2>Hometown: Azusa</h2>
+					                <h2>Favorite Beer: Lagunitas IPA</h2>  
 				            </li>
 				        </ul>
 				        <input type="hidden" id="selectName2" name="selectName" value="" />
@@ -31,12 +35,13 @@
 				        <ul id="selectName2" class="optionList">
 				            <li id="value0" class="option">
 				                <p>This weeks special is Lagunitas Maximus</p>
+				                <img src="img/lagunitasMaximus.png">
 				            </li> 
 				        </ul>
 				        <input type="hidden" id="selectName2" name="selectName" value="" />
 
 				        <div id="selectName3" class="dropDown">
-				            <span class="dropHeader">Subscribe</span>
+				            <span class="dropHeader">Write a Review</span>
 				        </div>
 				        <ul id="selectName3" class="optionList">
 				            <li id="value0" class="option">
@@ -47,11 +52,23 @@
 				        <input type="hidden" id="selectName3" name="selectName" value="" />
 
 				        <div id="selectName4" class="dropDown">
-				            <span class="dropHeader">Log In</span>
+				            <span class="dropHeader">Log Out</span>
 				        </div>
 				        <ul id="selectName4" class="optionList">
 				            <li id="value0" class="option">
-				                <p>Log in to write a review.</p>
+				                <article id="main">
+									<form method="post" action="login.html">
+										<ul>
+										 <li>
+											<button>
+												<a href="login.html" class="button">
+													<input type="submit" name="logout" value="Logout">
+												</a>
+											</button>
+										 </li>
+										</ul>
+									</form>
+								</article>
 				            </li>
 				            
 				        </ul>
@@ -59,67 +76,31 @@
 				    </div>   
 				</div>
 
-			<!-- <div class="dropdown" id="cssdropdown">
-				<button onclick="myFunction()" class="dropbtn" class="headlink">Home</button>
-				  <div id="myDropdown" class="dropdown-content" >
-				    <p>The best review you can make!</p>
-				  </div>
-
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn">Beer Review</button>
-				  <div id="myDropdown" class="dropdown-content">
-				    <p>This week's special is Lagunitas Maximus.</p>
-				  </div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn">Subscribe</button>
-				  <div id="myDropdown" class="dropdown-content">
-				    <p>Subsribe to review notifactions on this weeks special.</p>
-				  </div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn">Log In</button>
-				  <div id="myDropdown" class="dropdown-content">
-				    <p>Log In to write a review.</p>
-				  </div>
-			</div> -->
-
-
 			<footer>
 			</footer>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js">   </script>
 			<script>
-    $(function(){
-        if($.browser.msie && $.browser.version == '6.0'){
-            $('div.dropDown').hide();
-        }
-        $('div.dropDown').click(function(){
-            var ultoshow = $(this).attr('id');
-            $('ul#'+ultoshow).toggle();
-        });
-        $('li.option').click(function(){
-            var selectName = $(this).parent('ul.optionList').siblings('div.dropDown').attr('id');
-            var value = $(this).attr('id');
-            var optTitle = $(this).children('span.optTitle').html();    
-            var iconClass = optTitle.toLowerCase();
+			    $(function(){
+			        if($.browser.msie && $.browser.version == '6.0'){
+			            $('div.dropDown').hide();
+			        }
+			        $('div.dropDown').click(function(){
+			            var ultoshow = $(this).attr('id');
+			            $('ul#'+ultoshow).toggle();
+			        });
+			        $('li.option').click(function(){
+			            var selectName = $(this).parent('ul.optionList').siblings('div.dropDown').attr('id');
+			            var value = $(this).attr('id');
+			            var optTitle = $(this).children('span.optTitle').html();    
+			            var iconClass = optTitle.toLowerCase();
 
-            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.icon').children('img#sprite').attr('class',iconClass);
-            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.dropHeader').html(optTitle);
-            $('input#'+selectName).attr('value',value); 
-            document.search.submit();
-        });
-    });
-</script>
+			            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.icon').children('img#sprite').attr('class',iconClass);
+			            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.dropHeader').html(optTitle);
+			            $('input#'+selectName).attr('value',value); 
+			            document.search.submit();
+			        });
+			    });
+			</script>
 	</body>
-
-
-
-
-
-
 
 </html>

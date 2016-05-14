@@ -26,13 +26,14 @@ div.transbox {
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
-div.transbox p {
-  margin: 5%;
+div.transbox .signIn {
+  margin: 2%;
   font-weight: bold;
+  line-height: 50px;
 
 }
 
-*{padding:0;margin:0;}
+*{padding:0;margin:0;list-style-type:none;}
 
         div.dropDown{
             height: 100px;
@@ -76,14 +77,43 @@ div.transbox p {
         li.option:hover span.optTitle{
             color:#fff;
         }
-        input{clear:both}
+        input {
+            clear:both;
+            background-color: #501602;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form {
+            width: 90%;
+        }
+
         img.dropArrow{width:10px;height:10px;}
-        .iconName1 {width:15px;height:15px;background:#333;}
-        .iconName2 {width:15px;height:15px;background:#ccc;border:1px solid #333;}
 
- 
+.signIn h1 {
+    margin: auto;
+}
 
+h2 {
+    font-weight: 10px;
+}
 
+button {
+    width: 100%;
+    border: none;
+}
+
+img {
+    text-align: left;
+}
 
 
 
