@@ -14,7 +14,7 @@
 					</div>
 				</header>
 				
-					<div id="selectName" class="dropDown">
+					<!-- <div id="selectName" class="dropDown">
 			            <span class="dropHeader">Profile</span>
 			        </div>
 				        <ul id="selectName" class="optionList" >
@@ -27,7 +27,7 @@
 					                <h2>Favorite Beer: Lagunitas IPA</h2>  
 				            </li>
 				        </ul>
-				        <input type="hidden" id="selectName2" name="selectName" value="" />
+				        <input type="hidden" id="selectName2" name="selectName" value="" /> -->
 				   
 				        <div id="selectName2" class="dropDown">
 				            <span class="dropHeader">Beer Review</span>
@@ -35,72 +35,30 @@
 				        <ul id="selectName2" class="optionList">
 				            <li id="value0" class="option">
 				                <p>This weeks special is Lagunitas Maximus</p>
+				                <a href="beer.html"> Review</a>
 				                <img src="img/lagunitasMaximus.png">
 				            </li> 
 				        </ul>
 				        <input type="hidden" id="selectName2" name="selectName" value="" />
 
 				        <div id="selectName3" class="dropDown">
-				            <span class="dropHeader">Write a Review</span>
+				            <span class="dropHeader">Share</span>
 				        </div>
 				        <ul id="selectName3" class="optionList">
 				            <li id="value0" class="option">
-				                <p>Subscribe to receive the latest beer reviews.</p>
+				                <p>Share your findings.</p>
 				            </li>
 				            
 				        </ul>
 				        <input type="hidden" id="selectName3" name="selectName" value="" />
-
-				        <div id="selectName4" class="dropDown">
-				            <span class="dropHeader">Log Out</span>
-				        </div>
-				        <ul id="selectName4" class="optionList">
-				            <li id="value0" class="option">
-				                <article id="main">
-									<form method="post" action="login.html">
-										<ul>
-										 <li>
-											<button>
-												<a href="login.html" class="button">
-													<input type="submit" name="logout" value="Logout">
-												</a>
-											</button>
-										 </li>
-										</ul>
-									</form>
-								</article>
-				            </li>
-				            
-				        </ul>
-				        <input type="hidden" id="selectName4" name="selectName" value="" />
+				        
 				    </div>   
 				</div>
 
 			<footer>
 			</footer>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js">   </script>
-			<script>
-			    $(function(){
-			        if($.browser.msie && $.browser.version == '6.0'){
-			            $('div.dropDown').hide();
-			        }
-			        $('div.dropDown').click(function(){
-			            var ultoshow = $(this).attr('id');
-			            $('ul#'+ultoshow).toggle();
-			        });
-			        $('li.option').click(function(){
-			            var selectName = $(this).parent('ul.optionList').siblings('div.dropDown').attr('id');
-			            var value = $(this).attr('id');
-			            var optTitle = $(this).children('span.optTitle').html();    
-			            var iconClass = optTitle.toLowerCase();
-
-			            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.icon').children('img#sprite').attr('class',iconClass);
-			            $(this).parent('ul.optionList').siblings('div.dropDown').children('span.dropHeader').html(optTitle);
-			            $('input#'+selectName).attr('value',value); 
-			            document.search.submit();
-			        });
-			    });
-			</script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+			<script src="js/beer.js"></script>
 	</body>
 
 </html>
