@@ -1,22 +1,10 @@
 $(document).ready(function() {
     $("#beer_search").click(function(){
-        $.post("https://www.thebeerspot.com/api/search", 
-        { "function" : "beer" , 
-        "dev_key" : "DEV_API_KEY" , 
-        "search_term" : "darkness",
-        "limit" : "5" },  
-            function(response) {
-                $.each(response, function() {
-                    $.each(this, function(name, value) {
-                        // add each item to a div on the page
-                        $("#display").append(name + " : " + value + "<br />");
-                    });
-                    // throw a line break at the end of each item
-                    $("#display").append("<br />");
-                });
-                
-            });
-    })
+        $.getJSON("http://api.brewerydb.com/v2/?key=ed05c35d525c392e64ef73a314c381ac&format=json",
+        function(data){
+          console.log(JSON.stringify(data));
+        });
+    });
 });
 
 // $(function(){
