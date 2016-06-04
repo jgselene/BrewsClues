@@ -1,9 +1,7 @@
 $(document).ready(function() {
-    $("#beer_search").click(function(){
-        $.getJSON("http://api.brewerydb.com/v2/?key=ed05c35d525c392e64ef73a314c381ac&format=json",
+    $.getJSON("http://api.brewerydb.com/v2/?key=ed05c35d525c392e64ef73a314c381ac&format=json",
         function(data){
           console.log(JSON.stringify(data));
-        });
     });
 });
 
