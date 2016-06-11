@@ -17,30 +17,7 @@
         Selene
     </author>
 
-    <plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
-    
-    <platform name="ios">
-
-        <config-file target="config.xml" parent="/*">
-          <feature name="SocialSharing">
-            <param name="ios-package" value="SocialSharing"/>
-            <param name="onload" value="true" />
-          </feature>
-        </config-file>
-
-        <header-file src="src/ios/SocialSharing.h"/>
-        <source-file src="src/ios/SocialSharing.m"/>
-
-        <framework src="Social.framework" weak="true" />
-        <framework src="MessageUI.framework" weak="true" />
-    </platform>
-
-    <platform name="android" />
-    <platform name="winphone" />
-
-    <preference name="orientation" value="default" />        <!-- all: default means both landscape and portrait are enabled -->
-    <preference name="target-device" value="universal" />      <!-- all: possible values handset, tablet, or universal -->
-    <preference name="fullscreen" value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <gap:plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
 
 </widget>
 
