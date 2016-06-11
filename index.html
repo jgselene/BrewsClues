@@ -3,7 +3,7 @@
 	<head>
 		<title>Midnight Drinks</title>
 		<link rel="stylesheet" href="css/styles.css">
-		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/SocialSharing.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Original+Surfer' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -61,6 +61,10 @@
 				        <ul id="selectName3" class="optionList">
 				            <li id="value0" class="option">
 				                <p>Share your findings.</p>
+				                <button onclick="window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl')">message, subject, image and link</button>
+								<button onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')">message via Twitter</button>
+								<button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
+				            	<button onclick="window.plugins.socialsharing.shareViaSMS('My cool message', null /* see the note below */, function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})">share via SMS</button>
 				            </li>
 				            
 				        </ul>
@@ -72,6 +76,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
 		<script src="js/beer.js"></script>
+		<script type="text/javascript" src="js/SocialSharing.js"></script>
 	</body>
 
 </html>
